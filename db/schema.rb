@@ -10,10 +10,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_20_033350) do
+ActiveRecord::Schema.define(version: 2019_05_20_041509) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "convoys", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "to_location_id"
+    t.integer "from_location_id"
+    t.string "name"
+    t.datetime "start_date"
+    t.datetime "finish_date"
+    t.boolean "fwd_only", default: false
+    t.boolean "completed", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "members", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "convoy_id"
+    t.boolean "confirmed", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
