@@ -1,2 +1,8 @@
-<h1>Convoys#new</h1>
-<p>Find me in app/views/convoys/new.html.erb</p>
+<%= simple_form_for @convoy  do |f| %>
+  <%= f.hidden_field  :user_id, value: current_user.id  %>
+  <%= f.input :name, label: "Make up a cool name for your convoy" %>
+  <%= f.input :fwd_only, label: "Is it only suitable for 4WD's?" %>
+  <%= f.input :start_date, as: :date, label: "When do you want to depart?" %>
+  <%= f.input :finish_date, as: :date, label: "When will you arrive?" %>
+  <%= f.button :submit, class: 'btn-danger' %>
+<% end %>
