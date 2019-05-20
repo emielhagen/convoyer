@@ -4,5 +4,6 @@
   <%= f.input :fwd_only, label: "Is it only suitable for 4WD's?" %>
   <%= f.input :start_date, as: :date, label: "When do you want to depart?" %>
   <%= f.input :finish_date, as: :date, label: "When will you arrive?" %>
+  <%= f.input :to_location, as: :string, label: "Will it work?" %>
   <%= f.button :submit, class: 'btn-danger' %>
 <% end %>
