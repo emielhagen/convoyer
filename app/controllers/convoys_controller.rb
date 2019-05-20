@@ -1,5 +1,6 @@
 class ConvoysController < ApplicationController
   def index
+    @convoys = Convoy.all
   end
 
   def show
