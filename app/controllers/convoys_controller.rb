@@ -13,14 +13,14 @@ class ConvoysController < ApplicationController
   end
 
   def create
-    verify_locations(params[:from_location], params[:to_location])
+     LocationService.new(params).create_location_hash
 
     @convoy = Convoy.new(convoy_params)
     @convoy.save!
 
     @convoys = Convoy.all
 
-    redirect_to convoys_path
+    redirect_to convoy_path(@convoy)
   end
 
   def edit
@@ -44,11 +44,7 @@ class ConvoysController < ApplicationController
     @convoy = Convoy.find(params[:id])
   end
 
-  def verify_locations(from, to)
-    #TODO: first try to find locations in database, if not there, get it from MAP api
-  end
-
   def convoy_params
-    params.require(:convoy).permit(:name, :start_date, :finish_date, :fwd_only, :user_id, :completed)
+    params.require(:convoy).permit(:from_location_id, :to_location_id, :name, :start_date, :finish_date, :fwd_only, :user_id, :completed)
   end
 end
