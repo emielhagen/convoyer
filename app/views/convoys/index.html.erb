@@ -6,6 +6,8 @@
       <p>Arrive at: <%= convoy.finish_date.strftime("%d-%m-%Y")%></p>
       <p>4WD only: <%= convoy.fwd_only%></p>
       <p>Started by: <%= convoy.user.name%></p>
+      <p>From: <%= convoy.from_location.name %></p>
+      <p>To: <%=convoy.to_location.name  %></p>
       <% if convoy.user_id == current_user.id %>
         <p><%= link_to 'Edit', edit_convoy_path(convoy) %></p>
         <p> <%= link_to 'Delete', convoy_path(convoy), method: :delete, data: { confirm: "Are you sure?" } %></p>
