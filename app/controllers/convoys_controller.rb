@@ -1,4 +1,6 @@
 class ConvoysController < ApplicationController
+  before_action :set_convoy, only: %i[show update edit destroy]
+
   def index
     @convoys = Convoy.all
   end
@@ -17,16 +19,30 @@ class ConvoysController < ApplicationController
     @convoy.save!
 
     @convoys = Convoy.all
-    render action: 'show'
+
+    redirect_to convoys_path
   end
 
-  def destroy
+  def edit
   end
 
   def update
+    @convoy.update(convoy_params)
+
+    redirect_to convoy_path(@convoy)
+  end
+
+  def destroy
+    @convoy.delete
+
+    redirect_to convoys_path
   end
 
   private
+
+  def set_convoy
+    @convoy = Convoy.find(params[:id])
+  end
 
   def verify_locations(from, to)
     #TODO: first try to find locations in database, if not there, get it from MAP api
