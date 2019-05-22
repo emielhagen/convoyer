@@ -1,0 +1,25 @@
+.footer-banner {
+  position: absolute;
+  bottom: -200px;
+  background-color: black;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.footer-flex {
+  text-align: center;
+  color: #e6e6e6;
+}
+
+.footer-coffee {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.red-heart {
+  color: red;
+}

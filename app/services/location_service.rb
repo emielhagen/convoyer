@@ -11,6 +11,7 @@ class LocationService
   end
 
   def create_location_hash
+    return if from_location.empty? || to_location.empty?
     from_id = find_or_create_location(from_location)
     to_id = find_or_create_location(to_location)
 

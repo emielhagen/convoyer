@@ -16,11 +16,12 @@ class ConvoysController < ApplicationController
      LocationService.new(params).create_location_hash
 
     @convoy = Convoy.new(convoy_params)
-    @convoy.save!
 
-    @convoys = Convoy.all
-
-    redirect_to convoy_path(@convoy)
+    if @convoy.save
+      redirect_to convoy_path(@convoy)
+    else
+      render :new
+    end
   end
 
   def edit

@@ -3,4 +3,6 @@ class Convoy < ApplicationRecord
   belongs_to :user
   belongs_to :to_location, class_name: 'Location', optional: true
   belongs_to :from_location, class_name: 'Location', optional: true
+
+  validates :name, :from_location_id, :to_location_id, presence: true
 end
