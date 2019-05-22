@@ -1,7 +1,5 @@
 import "bootstrap";
-import logGer from '../components/test';
-
-
+import typed from '../components/typed_components'
 
 
 
