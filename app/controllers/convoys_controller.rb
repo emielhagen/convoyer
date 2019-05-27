@@ -2,7 +2,7 @@ class ConvoysController < ApplicationController
   before_action :set_convoy, only: %i[show update edit destroy]
 
   def index
-    @convoys = Convoy.all
+    @convoys = policy_scope(Convoy).all
   end
 
   def show
@@ -10,6 +10,7 @@ class ConvoysController < ApplicationController
 
   def new
     @convoy = Convoy.new
+    authorize @convoy
   end
 
   def create
@@ -43,6 +44,7 @@ class ConvoysController < ApplicationController
 
   def set_convoy
     @convoy = Convoy.find(params[:id])
+    authorize @convoy
   end
 
   def convoy_params

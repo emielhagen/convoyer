@@ -1,10 +1,7 @@
 import mapboxgl from 'mapbox-gl';
 
 const apiKey = 'pk.eyJ1IjoiZW1pZWxnZW9jb2RlciIsImEiOiJjanZwdmRyeW0waDB5M3ptb2kya3F1bnpjIn0.h7N-hVVmVCTZRTE35T_tFA';
-// const form = document.getElementById('address_form');
-
 mapboxgl.accessToken = apiKey;
-
 
 const initMapboxGl = (selector) => {
   const form = document.querySelector(selector);

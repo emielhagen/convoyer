@@ -16,3 +16,7 @@
     </div>
   <% end %>
 </div>
+
+<% if policy(Convoy).create? %>
+  <%= link_to 'Start a convoy!', new_convoy_path, class: 'btn btn-success' %>
+<% end %>
