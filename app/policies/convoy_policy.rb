@@ -12,10 +12,10 @@ class ConvoyPolicy < ApplicationPolicy
   end
 
   def update?
-    return true?
+    return true
   end
 
   def destroy?
-    return true?
+    return true
   end
 end

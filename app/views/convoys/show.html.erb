@@ -2,8 +2,17 @@
   <p><%= @convoy.name %></p>
   <p><%= @convoy.from_location.name %></p>
   <p><%= @convoy.to_location.name %></p>
+  <p>This convoy has currently <strong><%=@convoy.members.count%> members</strong></p>
+
+  <% if @convoy.user_id == current_user.id %>
+    <p> <%= link_to 'Delete', convoy_path(@convoy), method: :delete, data: { confirm: "Are you sure?" } %></p>
+  <% else %>
+    <% if @able_to_join %>
+      <p><%= link_to 'Join Convoy!', convoy_members_path(@convoy), method: :post %></p>
+    <% else %>
+      <p>You are part of this convoy!</p> <%= link_to 'Remove', member_path(@convoy), method: :delete %>
+    <% end %>
+  <% end %>
 </div>
 
 
-
-<p class="<%= @convoy.to_location.longitude%>"> does this even work </p>

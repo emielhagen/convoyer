@@ -6,6 +6,8 @@ class ConvoysController < ApplicationController
   end
 
   def show
+    @member = Member.find_by(user_id: current_user.id, convoy_id: @convoy.id)
+    @able_to_join = @member ? false : true
   end
 
   def new
@@ -17,6 +19,7 @@ class ConvoysController < ApplicationController
      LocationService.new(params).create_location_hash
 
     @convoy = Convoy.new(convoy_params)
+    authorize @convoy
 
     if @convoy.save
       redirect_to convoy_path(@convoy)
@@ -26,15 +29,18 @@ class ConvoysController < ApplicationController
   end
 
   def edit
+    authorize @convoy
   end
 
   def update
+    authorize @convoy
     @convoy.update(convoy_params)
 
     redirect_to convoy_path(@convoy)
   end
 
   def destroy
+    authorize @convoy
     @convoy.delete
 
     redirect_to convoys_path
