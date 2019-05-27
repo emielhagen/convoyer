@@ -9,8 +9,9 @@ const initMapboxGl = (selector) => {
     const map = new mapboxgl.Map({
       container: 'map',
       style: 'mapbox://styles/mapbox/streets-v9',
-      center: [-118.2439, 34.0544],
-      zoom: 12,
+      center: [133.886053, -23.700846],
+      zoom: 3,
+      interactive: false
     });
     form.addEventListener('submit', (event) => {
       event.preventDefault();

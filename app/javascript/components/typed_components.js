@@ -1,7 +1,12 @@
 import Typed from 'typed.js';
 
 const options = {
-  strings: ["Create a convoy.", "Find a convoy."],
+  strings: ["You're going on a trip.",
+            "Nice!",
+            "But it is a long drive",
+            "and it is boring to go alone",
+            "so what do you do?",
+            "You join or create a convoy!"],
   typeSpeed: 30
 }
 

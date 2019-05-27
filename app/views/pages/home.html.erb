@@ -1,36 +1,55 @@
-<h1 id='convoy-title'></h1>
-<button id="sweet-alert-demo" class="btn btn-primary">Click me!</button>
-
-
-<p>Create or join a convoy to team up on those long drives through the outback.</p>
-
-<%= link_to 'Start a convoy!', new_convoy_path, class: 'btn btn-success' %>
-
-<div id="title">
-  <h2>How it works</h2>
+<div class="container">
+  <div class="background-banner">
+    <div class="grouped-info">
+      <span id='convoy-title'></span>
+      <p>Create or join a convoy to team up on those long drives through the outback.</p>
+      <%= link_to 'Start a convoy!', new_convoy_path, class: 'btn btn-black' %>
+    </div>
+  </div>
 </div>
-<h4>Finding a convoy</h4>
-<ul>
-  <li>1. Search for a route</li>
-  <li>2. Apply to join convoy</li>
-  <li>3. Wait for confirmation</li>
-  <li>4. That's it, ready to go!</li>
-</ul>
-<h4>Creating a convoy</h4>
-<ul>
-  <li>1. Define your route</li>
-  <li>2. Set your criteria</li>
-  <li>3. Wait for people to join</li>
-  <li>4. That's it, ready to go!</li>
-</ul>
-
-<%= link_to 'Find a convoy', convoys_path, class: 'btn btn-success' %>
 
 
+<div class="container">
+  <div class="woth-green-background">
+    <div id="title">
+      <h2>How it works</h2>
+    </div>
 
-<form action="#" id='address_form'>
-  <input type="text" placeholder="enter address" id='address_input'>
-  <input type="submit">
-</form>
+    <div class="home-explainer">
+      <div class="find-convoy">
+        <h4>Finding a convoy</h4>
+        <ul>
+          <li>1. Search for a route</li>
+          <li>2. Apply to join convoy</li>
+          <li>3. Wait for confirmation</li>
+          <li>4. That's it, ready to go!</li>
+        </ul>
+      </div>
+      <div class="create-convoy">
+        <h4>Creating a convoy</h4>
+        <ul>
+          <li>1. Define your route</li>
+          <li>2. Set your criteria</li>
+          <li>3. Wait for people to join</li>
+          <li>4. That's it, ready to go!</li>
+        </ul>
+      </div>
+    </div>
+    <div class="find-convoy-button">
+      <%= link_to 'Find a convoy', convoys_path, class: 'btn btn-black' %>
+    </div>
+  </div>
+</div>
 
-<div id="map" style="height: 300px; width: 600px"></div>
+<div class="container">
+  <div id="map" style="height: 500px; width: 100%"></div>
+  <form action="#" id='address_form'>
+    <input type="text" placeholder="enter address" id='address_input'>
+    <input type="submit">
+  </form>
+</div>
+
+
+<button id="sweet-alert-demo" class="btn btn-black">Click me!</button>
+
+

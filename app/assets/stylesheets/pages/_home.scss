@@ -2,3 +2,48 @@ body {
   min-height: 100vh;
   position: relative;
 }
+
+ul {
+  list-style: none;
+}
+
+.background-banner {
+  background: linear-gradient(transparent 1%, $woth-gray 100%), url(http://sf.co.ua/12/11/wallpaper-2448240.jpg);
+  background-position: center;
+  width: 100%;
+  background-size: cover;
+  height: 70vh;
+  background-repeat: no-repeat;
+}
+
+#convoy-title {
+  font-family: 'Special Elite', cursive;
+  font-size: 30px;
+}
+
+.grouped-info {
+  text-align: left;
+  padding-top: 15%;
+  padding-left: 25%;
+  color: white;
+}
+
+.woth-green-background {
+  background-color: $woth-green;
+  color: $woth-yellow;
+  padding: 50px;
+}
+
+.home-explainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+#title {
+  text-align: center;
+}
+
+.find-convoy-button {
+  text-align: center;
+  margin-top: 25px;
+}
