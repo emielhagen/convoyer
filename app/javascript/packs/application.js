@@ -1,6 +1,7 @@
 import "bootstrap";
-import typed from '../components/typed_components'
+import { initType } from '../components/typed_components'
 import { initSweetalert } from '../plugins/init_sweetalert';
+import { initMapboxGl } from '../plugins/init_mapbox'
 
 initSweetalert('#sweet-alert-demo', {
   title: "A nice alert",
@@ -8,5 +9,6 @@ initSweetalert('#sweet-alert-demo', {
   icon: "success"
 });
 
+initType("#convoy-title");
 
-
+initMapboxGl('#address_form');

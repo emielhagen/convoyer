@@ -5,6 +5,11 @@ const options = {
   typeSpeed: 30
 }
 
-const typed = new Typed("#convoy-title", options);
+const initType = (selector) => {
+  const typeString = document.querySelector(selector);
+  if (typeString) {
+    new Typed(typeString, options);
+  };
+};
 
-export default { typed };
+export { initType };
