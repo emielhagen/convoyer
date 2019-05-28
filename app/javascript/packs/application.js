@@ -1,7 +1,6 @@
 import "bootstrap";
 import { initType } from '../components/typed_components'
 import { initSweetalert } from '../plugins/init_sweetalert';
-import { initMapboxGl } from '../plugins/init_mapbox'
 import { initMapbox } from '../plugins/new_mapbox'
 
 initSweetalert('#sweet-alert-demo', {
@@ -11,6 +10,4 @@ initSweetalert('#sweet-alert-demo', {
 });
 
 initType("#convoy-title");
-
-initMapboxGl('#map');
 initMapbox();

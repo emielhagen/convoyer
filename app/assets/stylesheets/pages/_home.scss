@@ -47,3 +47,10 @@ ul {
   text-align: center;
   margin-top: 25px;
 }
+
+.background-car {
+  background: linear-gradient(to bottom,rgba(22,22,22,.3) 0,rgba(22,22,22,.7) 50%,$woth-brown 100%),image_url('g63');
+  height: 500px;
+  width: 100%;
+  background-repeat: round;
+}
