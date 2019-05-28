@@ -8,6 +8,8 @@ class ConvoysController < ApplicationController
   def show
     @member = Member.find_by(user_id: current_user.id, convoy_id: @convoy.id)
     @able_to_join = @member ? false : true
+
+    @geojson = build_geojson
   end
 
   def new
@@ -47,6 +49,13 @@ class ConvoysController < ApplicationController
   end
 
   private
+
+  def build_geojson
+    {
+      type: "FeatureCollection",
+      features: @convoy.features
+    }
+  end
 
   def set_convoy
     @convoy = Convoy.find(params[:id])

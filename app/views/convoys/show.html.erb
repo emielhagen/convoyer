@@ -13,6 +13,11 @@
       <p>You are part of this convoy!</p> <%= link_to 'Remove', member_path(@convoy), method: :delete %>
     <% end %>
   <% end %>
+  <div id="new_map"
+       style="height: 500px; width: 100%"
+       data-convoys="<%= @geojson.to_json %>"
+       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
 </div>
 
 

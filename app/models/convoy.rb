@@ -5,4 +5,12 @@ class Convoy < ApplicationRecord
   belongs_to :from_location, class_name: 'Location', optional: true
 
   validates :name, :from_location_id, :to_location_id, presence: true
+
+  def locations
+    [from_location, to_location]
+  end
+
+  def features
+    locations.map(&:to_feature)
+  end
 end
