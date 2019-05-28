@@ -1,8 +1,6 @@
 import 'mapbox-gl/dist/mapbox-gl.css';
 import mapboxgl from 'mapbox-gl';
 
-const apiKey = 'pk.eyJ1IjoiZW1pZWxnZW9jb2RlciIsImEiOiJjanZwdmRyeW0waDB5M3ptb2kya3F1bnpjIn0.h7N-hVVmVCTZRTE35T_tFA';
-
 const fitMapToMarkers = (map, features) => {
   const bounds = new mapboxgl.LngLatBounds();
   features.forEach(({ geometry }) => bounds.extend(geometry.coordinates));
@@ -49,8 +47,7 @@ const initMapbox = () => {
   const mapElement = document.getElementById('new_map');
 
   if (mapElement) {
-    // mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
-    mapboxgl.accessToken = apiKey;
+    mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
     const map = new mapboxgl.Map({
       container: 'new_map',
       interactive: false,

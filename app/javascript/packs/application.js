@@ -12,5 +12,5 @@ initSweetalert('#sweet-alert-demo', {
 
 initType("#convoy-title");
 
-initMapboxGl('#address_form');
+initMapboxGl('#map');
 initMapbox();
