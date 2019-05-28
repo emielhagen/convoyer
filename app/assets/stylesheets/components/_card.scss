@@ -2,7 +2,12 @@
   margin: 25px;
 }
 
-.convoy-details-card {
+.convoy-card-details {
   display: flex;
   justify-content: space-between;
+}
+
+.convoy-card-content {
+  font-weight: bold;
+  padding: 5%;
 }

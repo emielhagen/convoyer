@@ -1,18 +1,18 @@
 <div class="card">
-  <div class="convoy-details-card">
+  <div class="convoy-card-details">
     <div class="convoy-card-content">
-      <p><%= @convoy.name %></p>
-      <p><%= @convoy.from_location.name %></p>
-      <p><%= @convoy.to_location.name %></p>
+      <p>Name: <%= @convoy.name %></p>
+      <p>Start from: <%= @convoy.from_location.name %></p>
+      <p>Finish at: <%= @convoy.to_location.name %></p>
       <p>This convoy has currently <strong><%=@convoy.members.count%> members</strong></p>
 
       <% if @convoy.user_id == current_user.id %>
         <p> <%= link_to 'Delete', convoy_path(@convoy), method: :delete, data: { confirm: "Are you sure?" } %></p>
       <% else %>
         <% if @able_to_join %>
-          <p><%= link_to 'Join Convoy!', convoy_members_path(@convoy), method: :post %></p>
+          <p><%= link_to 'Join Convoy!', convoy_members_path(@convoy), method: :post, class: 'btn btn-black', id: "sweet-alert-demo", data: { confirm: 'Are you sure? '} %></p>
         <% else %>
-          <p>You are part of this convoy!</p> <%= link_to 'Remove', member_path(@convoy), method: :delete %>
+          <p>You are part of this convoy!</p> <%= link_to 'Remove', member_path(@convoy), method: :delete, class: 'btn btn-black', data: { confirm: 'Sure?' } %>
         <% end %>
       <% end %>
     </div>
@@ -25,5 +25,3 @@
     </div>
   </div>
 </div>
-
-
