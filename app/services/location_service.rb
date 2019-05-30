@@ -39,7 +39,10 @@ class LocationService
     response = JSON.parse(HTTParty.get("#{base_url}#{location_name}.json?access_token=#{api_key}"))
     return if response.nil? || response.dig('features').empty?
 
-    response.dig('features')&.first.dig('geometry', 'coordinates')
+    features = response.dig('features')&.first
+    return if features.empty?
+
+    features.dig('geometry', 'coordinates')
   end
 
   def create_new_location(name, coordinates)
