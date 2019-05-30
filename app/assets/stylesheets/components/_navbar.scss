@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: $woth-brown;
+  background: black;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -12,9 +12,17 @@
 }
 
 .nav-link {
-  color: $woth-pink !important;
+  color: $woth-yellow !important;
 }
 
 .navbar-brand {
-  color: $woth-pink !important;
+  color: $woth-yellow !important;
+}
+
+#navbarDropdown {
+  background-color: $woth-yellow !important;
+}
+
+.explore {
+  font-family: 'Special Elite', cursive;
 }

@@ -1,6 +1,5 @@
-body {
-  min-height: 100vh;
-  position: relative;
+#body-wrapper {
+  min-height: calc(100vh - 269px);
 }
 
 ul {
@@ -8,11 +7,11 @@ ul {
 }
 
 .background-banner {
-  background: linear-gradient(transparent 1%, $woth-gray 100%), url(http://sf.co.ua/12/11/wallpaper-2448240.jpg);
+  background: linear-gradient(transparent 1%, $woth-gray 100%), url('http://www.wallpaperbetter.com/wallpaper/201/32/943/long-straight-road-in-monument-valley-1080P-wallpaper.jpg');
   background-position: center;
   width: 100%;
   background-size: cover;
-  height: 70vh;
+  height: calc(100vh - 69px);
   background-repeat: no-repeat;
 }
 
@@ -28,29 +27,63 @@ ul {
   color: white;
 }
 
-.woth-green-background {
-  background-color: $woth-green;
-  color: $woth-yellow;
-  padding: 50px;
-}
-
-.home-explainer {
-  display: flex;
-  justify-content: space-around;
-}
-
-#title {
-  text-align: center;
-}
-
 .find-convoy-button {
   text-align: center;
   margin-top: 25px;
 }
 
-.background-car {
-  background: linear-gradient(to bottom,rgba(22,22,22,.3) 0,rgba(22,22,22,.7) 50%,$woth-brown 100%),image_url('g63');
-  height: 500px;
-  width: 100%;
-  background-repeat: round;
+.find-convoy p {
+  margin: 0px;
 }
+
+.find-convoy {
+  border: 1px solid black;
+  padding: 25px;
+}
+
+.create-convoy p {
+  margin: 0px;
+}
+
+.create-convoy {
+  border: 1px solid black;
+  padding: 25px;
+}
+
+.explainer-white {
+  background-color: $light-gray;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.explainer-black {
+  background-color: $woth-yellow;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.explainer-image {
+  width: 100%;
+  height: 400px;
+}
+
+.home-explainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+    .grid1 { grid-area: 1 / 1 / 2 / 2; }
+    .grid2 { grid-area: 1 / 2 / 2 / 3; }
+    .grid3 { grid-area: 2 / 1 / 3 / 2; }
+    .grid4 { grid-area: 2 / 2 / 3 / 3; }
+}
+
+
+
+
+
+
+

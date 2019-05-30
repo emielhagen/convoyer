@@ -1,47 +1,37 @@
-<div class="container">
-  <div class="background-banner">
-    <div class="grouped-info">
-      <span id='convoy-title'></span>
-      <p>Create or join a convoy to team up on those long drives through the outback.</p>
-      <%= link_to 'Start a convoy!', new_convoy_path, class: 'btn btn-black' %>
-    </div>
+<div class="background-banner">
+  <div class="grouped-info">
+    <span id='convoy-title'></span>
+    <p>Create or join a convoy to team up on those long drives through the outback.</p>
+    <%= link_to 'Start a convoy!', new_convoy_path, class: 'btn btn-black' %>
   </div>
 </div>
 
-<div class="container">
-  <div class="woth-green-background">
-    <div id="title">
-      <h2>How it works</h2>
-    </div>
 
-    <div class="home-explainer">
-      <div class="find-convoy">
-        <h4>Finding a convoy</h4>
-        <ul>
-          <li>1. Search for a route</li>
-          <li>2. Apply to join convoy</li>
-          <li>3. Wait for confirmation</li>
-          <li>4. That's it, ready to go!</li>
-        </ul>
-      </div>
-      <div class="create-convoy">
-        <h4>Creating a convoy</h4>
-        <ul>
-          <li>1. Define your route</li>
-          <li>2. Set your criteria</li>
-          <li>3. Wait for people to join</li>
-          <li>4. That's it, ready to go!</li>
-        </ul>
-      </div>
-    </div>
-    <div class="find-convoy-button">
-      <%= link_to 'Find a convoy', convoys_path, class: 'btn btn-black' %>
+<div class="home-explainer">
+  <div class="grid1 explainer-white">
+    <div class="find-convoy">
+      <h4>Finding a convoy</h4>
+      <p>1. Search for a route</p>
+      <p>2. Apply to join convoy</p>
+      <p>3. Wait for confirmation</p>
+      <p>4. That's it, ready to go!</p>
     </div>
   </div>
-</div>
+  <div class="grid2 explainer-black">
+    <img src="http://cubimension.net/blog/wp-content/uploads/2014/08/hitchhiker.jpg" class="explainer-image">
+  </div>
 
-<div class="container">
-  <div class="background-car">
+  <div class="grid3 explainer-black">
+    <img src="https://cdni.rt.com/files/2018.06/article/5b1cd990fc7e93b97f8b45bb.jpg" class="explainer-image">
+  </div>
+  <div class="grid4 explainer-white">
+    <div class="create-convoy">
+      <h4>Creating a convoy</h4>
+      <p>1. Define your route</p>
+      <p>2. Set your criteria</p>
+      <p>3. Wait for people to join</p>
+      <p>4. That's it, ready to go!</p>
+    </div>
   </div>
 </div>
 

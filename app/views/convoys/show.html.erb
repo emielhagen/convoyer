@@ -8,6 +8,7 @@
 
       <% if @convoy.user_id == current_user.id %>
         <p> <%= link_to 'Delete', convoy_path(@convoy), method: :delete, data: { confirm: "Are you sure?" } %></p>
+        <p><%= link_to 'Edit the trip', edit_convoy_path(@convoy) %></p>
       <% else %>
         <% if @able_to_join %>
           <p><%= link_to 'Join Convoy!', convoy_members_path(@convoy), method: :post, class: 'btn btn-black', id: "sweet-alert-demo", data: { confirm: 'Are you sure? '} %></p>

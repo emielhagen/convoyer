@@ -1,7 +1,5 @@
 .footer-banner {
-  position: absolute;
-  bottom: -200px;
-  background-color: $woth-brown;
+  background-color: black;
   height: 200px;
   display: flex;
   justify-content: center;
@@ -11,7 +9,7 @@
 
 .footer-flex {
   text-align: center;
-  color: #e6e6e6;
+  color: $woth-yellow;
 }
 
 .footer-coffee {
