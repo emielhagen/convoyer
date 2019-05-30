@@ -1,0 +1,28 @@
+<h1>Hey there, welcome to your profile page!</h1>
+
+<% @user.convoys.each do |convoy| %>
+  <div class="card">
+    <p>Name: <%= convoy.name%></p>
+    <p>Start at: <%= convoy.start_date.strftime("%d-%m-%Y")%></p>
+    <p>Arrive at: <%= convoy.finish_date.strftime("%d-%m-%Y")%></p>
+    <p>4WD only: <%= convoy.fwd_only%></p>
+    <p>Started by: <%= convoy.user.name%></p>
+    <p>From: <%= convoy.from_location.name %></p>
+    <p>To: <%=convoy.to_location.name  %></p>
+    <p><%= link_to 'Details', convoy_path(convoy) %></p>
+    <p><%= link_to 'Edit', edit_convoy_path(convoy) %></p>
+    <p> <%= link_to 'Delete', convoy_path(convoy), method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-danger' %></p>
+  </div>
+<% end %>
+
+
+
+
+
+<div class="btn btn-black", id="btn-form-dropdown">
+  Edit personal details
+</div>
+
+<div class="form-wrapper form-hidden">
+  <%= render 'user_form' %>
+</div>

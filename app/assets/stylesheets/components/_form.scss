@@ -4,3 +4,25 @@
   padding: 50px;
   border: 1px solid lightgray;
 }
+
+.form-wrapper {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-hidden {
+  display: none;
+}
+
+
+.user-edit-form-custom {
+  border: 1px solid black;
+  padding: 50px;
+  margin: 25px 0px;
+  background-color: lightgray;
+  &:hover {
+    box-shadow: 1px 1px $woth-yellow;
+  }
+}
