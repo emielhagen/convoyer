@@ -7,9 +7,10 @@ const fitMapToMarkers = (map, features) => {
   map.fitBounds(bounds, { padding: 70, maxZoom: 15 });
 
   features.forEach((feature) => {
-    new mapboxgl.Marker()
+    new mapboxgl.Marker({ color: 'black' })
     .setLngLat([feature.geometry.coordinates[0], feature.geometry.coordinates[1]])
-    .addTo(map);
+    .addTo(map)
+    .setPopup('hello');
   });
 };
 
@@ -25,7 +26,9 @@ const addLineToMap = (map, features) => {
       "type": "geojson",
       "data": {
         "type": "Feature",
-        "properties": {},
+        "properties": {
+          "description": "WILL THIS WORK?!"
+        },
         "geometry": {
           "type": "LineString",
           "coordinates": line
@@ -37,11 +40,12 @@ const addLineToMap = (map, features) => {
       "line-cap": "round"
     },
     "paint": {
-      "line-color": "#888",
-      "line-width": 8
+      "line-color": "#E5DE86",
+      "line-width": 3
     }
   });
 };
+
 
 const initMapbox = () => {
   const mapElement = document.getElementById('new_map');
@@ -56,6 +60,8 @@ const initMapbox = () => {
 
     map.on('load', function() {
       const convoys = JSON.parse(mapElement.dataset.convoys);
+      const convoyt = JSON.parse(mapElement.dataset.convoyId);
+
       map.addSource('convoys', {
         type: 'geojson',
         data: convoys,

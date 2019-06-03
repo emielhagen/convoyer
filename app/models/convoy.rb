@@ -1,5 +1,6 @@
 class Convoy < ApplicationRecord
   has_many :members
+  has_many :reviews
   belongs_to :user
   belongs_to :to_location, class_name: 'Location', optional: true
   belongs_to :from_location, class_name: 'Location', optional: true
