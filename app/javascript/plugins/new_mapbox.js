@@ -9,8 +9,7 @@ const fitMapToMarkers = (map, features) => {
   features.forEach((feature) => {
     new mapboxgl.Marker({ color: 'black' })
     .setLngLat([feature.geometry.coordinates[0], feature.geometry.coordinates[1]])
-    .addTo(map)
-    .setPopup('hello');
+    .addTo(map);
   });
 };
 
