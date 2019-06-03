@@ -17,12 +17,24 @@
         <% end %>
       <% end %>
     </div>
+    <div id="reviews">
+      <div class="reviews-count">
+        <%= render 'reviews/reviewed' %>
+      </div>
+    </div>
     <div class="convoy-card-map">
       <div id="new_map"
            style="height: 50vh; width: 50vh"
            data-convoys="<%= @geojson.to_json %>"
+           data-convoy-id="<%= @convoy.id %>"
            data-mapbox-api-key=<%= ENV['MAPBOX_API_KEY'] %>>
       </div>
     </div>
   </div>
+  <div class="btn btn-black", id="btn-form-dropdown">Review!</div>
+    <div class="form-wrapper form-hidden">
+      <%= render 'reviews/form', convoy: @convoy, review: @review %>
+  </div>
 </div>
+
+

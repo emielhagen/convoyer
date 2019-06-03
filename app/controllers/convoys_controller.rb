@@ -15,6 +15,7 @@ class ConvoysController < ApplicationController
 
   def show
     @member = Member.find_by(user_id: current_user.id, convoy_id: @convoy.id)
+    @review = Review.new
     @able_to_join = @member ? false : true
 
     @geojson = build_geojson
