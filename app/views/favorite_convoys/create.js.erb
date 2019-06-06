@@ -1,0 +1,6 @@
+function renderUser(userHTML) {
+  const convoy = document.querySelector("[data-convoy-id='<%= @convoy.id %>']");
+  convoy.innerHTML = userHTML;
+}
+
+renderUser('<%= j render "convoys/heart", convoy: @convoy %>');

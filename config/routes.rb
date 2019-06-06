@@ -3,9 +3,11 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   resources :convoys do
+    resources :favorite_convoys, only: [:create]
     resources :members, only: :create
     resources :reviews, only: :create
   end
   resources :users, only: [:show, :edit, :update]
   resources :members, only: :destroy
+  resources :favorite_convoys, only: :destroy
 end

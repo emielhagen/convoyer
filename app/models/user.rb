@@ -6,4 +6,5 @@ class User < ApplicationRecord
 
   has_many :members
   has_many :convoys
+  has_many :favorite_convoys
 end

@@ -1,0 +1,8 @@
+function addReview(reviewHTML) {
+  const reviews = document.getElementById('hello-world');
+  reviews.innerHTML = null;
+  reviews.insertAdjacentHTML('beforeend', reviewHTML);
+}
+
+addReview('<h1> hello world </h1>');
+
