@@ -1,2 +1,7 @@
-<%= @convoy.reviews.count %>
-<%= @convoy.reviews&.last&.content %>
+<h2>Reviews:</h2>
+<% @convoy.reviews.order(:created_at).reverse.each do |review| %>
+  <div class="card">
+    <p> <%= review.content  %></p>
+    <p><%= review.rating %></p>
+  </div>
+<% end %>

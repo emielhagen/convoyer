@@ -54,7 +54,7 @@ const initMapbox = () => {
     const map = new mapboxgl.Map({
       container: 'new_map',
       interactive: false,
-      style: 'mapbox://styles/mapbox/streets-v10'
+      style: 'mapbox://styles/mapbox/streets-v11'
     });
 
     map.on('load', function() {

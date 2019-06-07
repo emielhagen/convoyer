@@ -18,12 +18,6 @@
       <% end %>
     </div>
     <div id="hello-world">
-
-    </div>
-    <div id="reviews">
-      <div class="reviews-count">
-        <%= render 'reviews/reviewed' %>
-      </div>
     </div>
     <div class="convoy-card-map">
       <div id="new_map"
@@ -34,9 +28,14 @@
       </div>
     </div>
   </div>
-  <div class="btn btn-black", id="btn-form-dropdown">Review!</div>
+  <div class="btn btn-black", id="btn-form-dropdown">Add review!</div>
     <div class="form-wrapper form-hidden">
       <%= render 'reviews/form', convoy: @convoy, review: @review %>
+  </div>
+  <div id="reviews">
+    <div class="reviews-count">
+      <%= render 'reviews/reviewed' %>
+    </div>
   </div>
 </div>
 

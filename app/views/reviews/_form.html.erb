@@ -1,5 +1,7 @@
-<%= simple_form_for([ convoy, review ], remote: true) do |form| %>
-  <%= form.input :content %>
-  <%= form.input :rating %>
-  <%= form.button :submit %>
-<% end %>
+<div class="card">
+  <%= simple_form_for([ convoy, review ], remote: true) do |form| %>
+    <%= form.input :content %>
+    <%= form.input :rating %>
+    <%= form.button :submit, class: 'btn btn-black' %>
+  <% end %>
+</div>
