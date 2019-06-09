@@ -6,7 +6,7 @@ class LocationService
     @from_location = params.dig('convoy', 'from_location')
     @to_location = params.dig('convoy', 'to_location')
     @base_url = 'https://api.mapbox.com/geocoding/v5/mapbox.places/'
-    @api_key = ENV['geocode_key']
+    @api_key = ENV['MAPBOX_API_KEY']
     @params = params
   end
 

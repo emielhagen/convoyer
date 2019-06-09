@@ -1,7 +1,8 @@
 import "bootstrap";
 import { initType } from '../components/typed_components'
 import { initSweetalert } from '../plugins/init_sweetalert';
-import { initMapbox } from '../plugins/new_mapbox'
+import { initMapbox } from '../plugins/new_mapbox';
+import "../plugins/flatpickr";
 
 initSweetalert('#sweet-alert-demo', {
   title: "A nice alert",
