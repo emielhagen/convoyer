@@ -7,7 +7,7 @@ class ConvoysController < ApplicationController
         OR convoys.name @@ :query \
         OR users.name @@ :query \
       "
-      @convoys = policy_scope(Convoy).joins(:user, :from_location, :to_location).where(sql_query, query: params[:query])
+      @convoys = policy_scope(Convoy).joins(:user, :from_location, :to_location).where(sql_query, query: "%#{params[:query]}%")
     else
       @convoys = policy_scope(Convoy).all
     end

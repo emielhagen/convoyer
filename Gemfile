@@ -17,6 +17,7 @@ gem 'uglifier'
 gem 'webpacker', '~> 4.x'
 gem 'httparty'
 gem 'pundit'
+gem 'faker'
 
 # photo processing
 gem 'cloudinary', '~> 1.9.1'
