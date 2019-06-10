@@ -11,3 +11,15 @@
   font-weight: bold;
   padding: 5%;
 }
+
+
+
+.card {
+  box-shadow: 0px;
+  transform: scale(1.0);
+  &:hover {
+    box-shadow: 5px 5px #bbb;
+    transform: scale(1.05);
+    transition: 0,2s;
+  }
+}

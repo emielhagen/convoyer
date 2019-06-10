@@ -3,9 +3,9 @@ class ConvoysController < ApplicationController
 
   def index
     if params[:query].present?
-      sql_query = "locations.name @@ :query \
-        OR convoys.name @@ :query \
-        OR users.name @@ :query \
+      sql_query = "locations.name ILIKE :query \
+        OR convoys.name ILIKE :query \
+        OR users.name ILIKE :query \
       "
       @convoys = policy_scope(Convoy).joins(:user, :from_location, :to_location).where(sql_query, query: "%#{params[:query]}%")
     else
