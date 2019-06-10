@@ -72,6 +72,6 @@ class ConvoysController < ApplicationController
 
   def convoy_params
     params.require(:convoy).permit(:from_location_id, :to_location_id, :name, :start_date, :finish_date,
-                                   :fwd_only, :user_id, :completed)
+                                   :fwd_only, :user_id, :completed, :photo)
   end
 end

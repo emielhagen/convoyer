@@ -18,6 +18,10 @@ gem 'webpacker', '~> 4.x'
 gem 'httparty'
 gem 'pundit'
 
+# photo processing
+gem 'cloudinary', '~> 1.9.1'
+gem 'carrierwave', '~> 1.2'
+
 group :development do
   gem 'web-console', '>= 3.3.0'
 end

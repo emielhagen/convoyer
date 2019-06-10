@@ -1,4 +1,6 @@
 class Convoy < ApplicationRecord
+  mount_uploader :photo, PhotoUploader
+
   has_many :members
   has_many :favorite_convoys
   has_many :reviews
