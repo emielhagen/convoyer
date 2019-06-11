@@ -1,0 +1,8 @@
+<h3>All users that may have interesting convoys conming up</h3>
+
+<% @users.each do |user| %>
+  <div class="card">
+    <%= user.name %>
+    <%= user.email %>
+  </div>
+<% end %>

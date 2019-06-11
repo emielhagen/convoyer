@@ -1,0 +1,54 @@
+.card-kitchen {
+  border-radius: 5px;
+  position: relative;
+  margin: 10px;
+  width: 80%;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  font-family: $headers-font;
+  &:hover {
+    transform: scale(1.01);
+    transition: transform 0.2s;
+    box-shadow: 1px 1px #ccc;
+  }
+}
+
+.card__title {
+  padding: 5px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.card__content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__content-text {
+  margin-left: 15px;
+}
+
+.card__content-image {
+  margin: 10px;
+}
+
+.card__content-image-img {
+  border-radius: 5px;
+}
+
+.favorite_convoy_heart {
+  color: red;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 5px;
+}
+
+.card__links {
+  display: flex;
+  a {
+    margin-right: 10px;
+    text-decoration: none;
+  }
+}

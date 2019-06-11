@@ -7,7 +7,9 @@ Rails.application.routes.draw do
     resources :members, only: :create
     resources :reviews, only: :create
   end
-  resources :users, only: [:show, :edit, :update]
+  resources :users, only: [:index, :show, :edit, :update]
   resources :members, only: :destroy
   resources :favorite_convoys, only: :destroy
+
+  get 'kitchensink', to: 'pages#kitchensink'
 end

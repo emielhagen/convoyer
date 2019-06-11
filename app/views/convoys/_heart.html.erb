@@ -1,10 +1,10 @@
 <% if convoy.is_following?(current_user) %>
   <%= link_to favorite_convoy_path(FavoriteConvoy.find_by(user_id: current_user.id, convoy_id: convoy.id)), method: :delete, remote: true do %>
-    <i class="fas fa-heart"></i>
+    <i class="fas fa-heart favorite_convoy_heart"></i>
   <% end %>
 <% else %>
   <%= link_to convoy_favorite_convoys_path(convoy), method: :post, remote: true do %>
-    <i class="far fa-heart"></i>
+    <i class="far fa-heart favorite_convoy_heart"></i>
   <% end %>
 <% end %>
 

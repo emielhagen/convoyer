@@ -1,6 +1,10 @@
 class UsersController < ApplicationController
   before_action :set_user
 
+  def index
+    @users = policy_scope(User).all
+  end
+
   def show
   end
 
