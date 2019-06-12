@@ -1,8 +1,7 @@
-function addReview(reviewHTML) {
-  const reviews = document.querySelector('.reviews-count');
-  reviews.innerHTML = reviewHTML;
-  reviews.insertAdjacentHTML('afterbegin', reviewHTML);
+const updateCard = (userData) => {
+  const element = document.getElementById('emieltest');
+  element.innerHTML = userData;
+  element.insertAdjacentHTML('afterbegin', reviewHTML);
 }
 
-addReview('<%= j render "reviews/reviewed", review: @review %>');
-
+updateCard('<%= j render "convoys/convoy_card", convoy: @convoy, able_to_join: false %>');
