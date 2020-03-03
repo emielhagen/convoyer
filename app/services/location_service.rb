@@ -36,7 +36,7 @@ class LocationService
   end
 
   def get_mapbox_details(location_name)
-    response = JSON.parse(HTTParty.get("#{base_url}#{location_name}.json?access_token=#{api_key}"))
+    response = JSON.parse(HTTParty.get("#{base_url}#{location_name.gsub(/ /, '+')}.json?access_token=#{api_key}"))
     return if response.nil? || response.dig('features').empty?
 
     features = response.dig('features')&.first
